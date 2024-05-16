@@ -1,0 +1,21 @@
+{
+    "USE_BEST_THUMBNAILS": 0,
+    "REMOVE_THUMBNAIL_BACKGROUND": 0,
+    "THUMBNAIL_ASSESSMENT_THRESHOLD": 0.6,
+    "FULL_IMAGE_SELECTION_THRESHOLD": 0.5,
+    "MAX_INJECTIONS_PER_IMAGE": 10,
+    "CELL_SIZE": 10,
+    "data_dir": "data/",
+    "csv_file": "data/cropdiva/all_cropdiva_both_unapproved_and_approved.csv",
+    "full_images_dir": "data/full_images/",
+    "polydata_dir": "data/polydata/",
+    "thumbnails_dir": "data/thumbnails/",
+    "thumbnails_folder": "Thumbnails_for_injection/",
+    "output_dir": "output/",
+    "injected_full_images_dir": "output/injected_full_images/",
+    "updated_polydata_dir": "output/updated_polydata/",
+    "full_images_test_dir": "data/full_images_test/",
+    "good_thumbnails_folder": "data/thumbnails/training/good/",
+    "bad_thumbnails_folder": "data/thumbnails/training/bad/",
+    "output_csv_file": "output/filtered_annotations.csv"
+}
