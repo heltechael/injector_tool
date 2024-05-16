@@ -1,8 +1,4 @@
-data/
-data/full_images/
-data/thumbnails/21APR24_Approved_original_size/
-data/thumbnails/training/
-data/cropdiva/
+data/*
 src/injection/injector_old.py
 src/utils/grid_utils_OLD.py
 src/utils/grid_utils_copy.py
