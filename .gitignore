@@ -1,12 +1,12 @@
 data/*
-src/injection/injector_old.py
-src/utils/grid_utils_OLD.py
-src/utils/grid_utils_copy.py
-src/thumbnail_selection/thumbnail_assessor_OLD.py
-preprocessing/csv_data_IGIS/all_training_thumbnails.csv
+preprocessing/csv_data_IGIS/
 prompts/
 thumbnail_injector_codebase.txt
+
 preprocessing/
+!preprocessing/copy_IGIS_images.py
+!preprocessing/extract_parallel_v2.py
+
 output/
 *__pycache_*
 *.pth*
