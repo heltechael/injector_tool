@@ -1,6 +1,8 @@
+import os
 import cv2
 import numpy as np
 import random
+from tqdm import tqdm
 from src.utils.thumbnail_utils import ThumbnailUtils
 from src.utils.grid_utils import GridUtils
 from src.utils.csv_utils import CSVUtils
@@ -70,7 +72,6 @@ class Injector:
         bounding_boxes = self.csvUtils.get_bounding_boxes(upload_id, image_id, filename)
         unoccupied_cells_matrix = self.gridUtils.find_unoccupied_cells_matrix(bounding_boxes, full_image_width, full_image_height, CELL_SIZE)
 
-        print(f"Total thumbnails before: {len(self.thumbdata)+len(selected_thumbnails)}")
         # Inject 
         for i in range(num_injections):
 
@@ -81,6 +82,8 @@ class Injector:
 
             # Find viable position for inserting thumbnail
             decent_position = self.gridUtils.find_viable_position(thumb_width, thumb_height, unoccupied_cells_matrix, CELL_SIZE)
+            
+            # Thumbnail inserted at position (x,y)
             if decent_position:
                 x, y = decent_position
                 injected_image, bbox = self.inject_bbox(injected_image, thumbnail, (x, y))
@@ -101,12 +104,12 @@ class Injector:
                     'Approved': 'True',
                 }
                 self.csvUtils.add_injected_bounding_box(new_annotation)
-                print(f"Thumbnail inserted at position: {x}, {y}")
+            
+            # If no suitable position found for the thumbnail -> append thumbdata back in stack
             else:
                 self.thumbdata.append(thumbdata)
-                print("No suitable position found for the thumbnail. Thumbdata appended back in stack.")
 
-        print(f"Total thumbnails after: {len(self.thumbdata)}")
+        # Store debug full image with grid and bounding boxes
         output_bounding_boxes_dir = self.config.get('output_bounding_boxes_dir')
         self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
         return injected_image, bounding_boxes
@@ -114,9 +117,14 @@ class Injector:
     def inject_thumbnails_into_n_full_images(self, num_full_images, max_injections, output_images_dir):
         injected_images = []
         used_full_images = []
-        for image_data in self.full_images[:num_full_images]:
+
+        for image_data in tqdm(self.full_images[:num_full_images], desc="Injecting thumbnails"):
             full_image = self.dataLoader.load_image(image_data.path)
-            injected_image, bounding_boxes = self.inject_thumbnails_into_single_full_image(full_image, image_data, max_injections)
+            injected_image, _ = self.inject_thumbnails_into_single_full_image(full_image, image_data, max_injections)
+            
+            # Store the injected image locally
+            self.dataLoader.store_image(injected_image, f"{output_images_dir}/{os.path.splitext(image_data.filename)[0]}.png")
+            
             injected_images.append((injected_image, image_data))
             used_full_images.append(image_data)
 
@@ -126,7 +134,7 @@ class Injector:
         # Save the filtered CSV file
         output_csv_file = self.config.get('output_csv_file')
         self.dataLoader.save_filtered_csv_file(output_csv_file, filtered_csv_data)
-        
+
         return injected_images
 
     def draw_bounding_boxes_on_image_with_grids(self, image, bounding_boxes, unoccupied_cells_matrix, cell_size, output_bounding_boxes_dir, filename):

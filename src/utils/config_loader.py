@@ -19,16 +19,12 @@ class ConfigLoader:
     def _validate_config(self, config):
         required_keys = [
             "USE_BEST_THUMBNAILS",
-            "THUMBNAIL_ASSESSMENT_THRESHOLD",
-            "FULL_IMAGE_SELECTION_THRESHOLD",
             "MAX_INJECTIONS_PER_IMAGE",
             'data_dir',
             'full_images_dir',
-            'polydata_dir',
             'thumbnails_dir',
             'output_dir',
             'injected_full_images_dir',
-            'updated_polydata_dir'
         ]
 
         missing_keys = [key for key in required_keys if key not in config]

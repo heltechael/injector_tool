@@ -1,10 +1,5 @@
-import json
 import numpy as np
-import cv2
 import random
-from PIL import Image, ImageDraw
-from shapely.geometry import Polygon, MultiPolygon, box
-from shapely.ops import unary_union
 
 class GridUtils:
     def __init__(self, config):

@@ -7,14 +7,14 @@ class ThumbnailUtils:
         self.config = config
 
     def remove_background(self, bbox_image):
-        # Split the BGR color channels
-        B, G, R = cv2.split(bbox_image)
+        # Convert the image to float32 for calculations
+        bbox_image = bbox_image.astype(np.float32)
 
         # Calculate ExG (Excess Green)
-        ExG = 2 * G.astype(float) - R.astype(float) - B.astype(float)
+        ExG = 2 * bbox_image[:, :, 1] - bbox_image[:, :, 2] - bbox_image[:, :, 0]
 
         # Calculate ExR (Excess Red)
-        ExR = 1.4 * R.astype(float) - G.astype(float)
+        ExR = 1.4 * bbox_image[:, :, 2] - bbox_image[:, :, 1]
 
         # Create a binary mask based on the condition ExG - ExR >= 0
         mask = (ExG - ExR >= 0).astype(np.uint8) * 255
@@ -25,7 +25,7 @@ class ThumbnailUtils:
         mask = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
 
         # Apply the mask to the original image to remove the background
-        result = cv2.bitwise_and(bbox_image, bbox_image, mask=mask)
+        result = cv2.bitwise_and(bbox_image.astype(np.uint8), bbox_image.astype(np.uint8), mask=mask)
 
         return result
     
