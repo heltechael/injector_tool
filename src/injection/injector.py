@@ -87,24 +87,28 @@ class Injector:
             # Insert thumbnail at position (x,y)
             if decent_position:
                 x, y = decent_position
-                injected_image, bbox = self.inject_bbox(injected_image, thumbnail, (x, y))
-                bounding_boxes.append(bbox)
-                unoccupied_cells_matrix = self.gridUtils.update_unoccupied_cells_matrix(unoccupied_cells_matrix, bbox, CELL_SIZE)
-                
-                # Create a new annotation for the injected thumbnail
-                new_annotation = {
-                    'UploadId': upload_id,
-                    'FileName': filename,
-                    'UseForTraining': 'True',
-                    'PlantId': thumbdata.eppo,
-                    'MinX': str(x),
-                    'MaxX': str(x + thumb_width),
-                    'MinY': str(y),
-                    'MaxY': str(y + thumb_height),
-                    'Approved': 'True',
-                    'Injected': 'True'
-                }
-                self.csvUtils.add_injected_bounding_box(new_annotation)
+                try:
+                    injected_image, bbox = self.inject_bbox(injected_image, thumbnail, (x, y))
+                    bounding_boxes.append(bbox)
+                    unoccupied_cells_matrix = self.gridUtils.update_unoccupied_cells_matrix(unoccupied_cells_matrix, bbox, CELL_SIZE)
+                    
+                    # Create a new annotation for the injected thumbnail
+                    new_annotation = {
+                        'UploadId': upload_id,
+                        'FileName': filename,
+                        'UseForTraining': 'True',
+                        'PlantId': thumbdata.eppo,
+                        'MinX': str(x),
+                        'MaxX': str(x + thumb_width),
+                        'MinY': str(y),
+                        'MaxY': str(y + thumb_height),
+                        'Approved': 'True',
+                        'Injected': 'True'
+                    }
+                    self.csvUtils.add_injected_bounding_box(new_annotation)
+                except ValueError as e:
+                    print(f"Error injecting thumbnail: {e}")
+                    self.thumbdata.append(thumbdata)
             
             # If no suitable position found for the thumbnail -> append thumbdata back in stack
             else:
@@ -112,8 +116,7 @@ class Injector:
 
         # Store debug full image with grid and bounding boxes
         output_bounding_boxes_dir = self.config.get('output_bounding_boxes_dir')
-        if self.config.get('DEBUG'):
-            self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
+        self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
         return injected_image, bounding_boxes
     
     def inject_thumbnails_into_n_full_images(self, num_full_images, max_injections, output_images_dir):
@@ -125,7 +128,7 @@ class Injector:
             injected_image, _ = self.inject_thumbnails_into_single_full_image(full_image, image_data, max_injections)
             
             # Store the injected image locally
-            self.dataLoader.store_image(injected_image, f"{output_images_dir}/{os.path.splitext(image_data.filename)[0]}.png")
+            self.dataLoader.store_image(injected_image, f"{output_images_dir}/{os.path.splitext(image_data.filename)[0]}.jpg")
             
             injected_images.append((injected_image, image_data))
             used_full_images.append(image_data)
@@ -156,4 +159,4 @@ class Injector:
             cv2.rectangle(image_with_boxes, (minX, minY), (maxX, maxY), (0, 255, 0), 2)
 
         # Store the image with bounding boxes and grid using the specified function
-        self.dataLoader.store_image(image_with_boxes, f"{output_bounding_boxes_dir}/{filename}.png")
+        self.dataLoader.store_image(image_with_boxes, f"{output_bounding_boxes_dir}/{filename}.jpg")

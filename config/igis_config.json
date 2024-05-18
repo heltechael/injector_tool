@@ -6,11 +6,6 @@
     "MAX_INJECTIONS_PER_IMAGE": 50,
     "CELL_SIZE": 10,
     "DEBUG": 1,
-    "data_dir": "data/",
-    "csv_file": "data/cropdiva/FILTERED_all_cropdiva_both_unapproved_and_approved.csv",
-    "full_images_dir": "data/full_images/",
-    "thumbnails_dir": "data/thumbnails/",
-    "thumbnails_folder": "Thumbnails_for_injection/",
     "output_dir": "output",
     "injected_full_images_dir": "output/injected_full_images/",
     "updated_polydata_dir": "output/updated_polydata/",
@@ -18,8 +13,9 @@
     "good_thumbnails_folder": "data/thumbnails/training/good/",
     "bad_thumbnails_folder": "data/thumbnails/training/bad/",
     "output_csv_file": "output/filtered_annotations.csv",
-    "rwm_data_csv": "data/samples_images.csv",
-    "rwm_data_dir": "/mnt/rwmdata/michael-data/sample_full_images",
-    "rwm_full_images_dir": "sample_full_images/",
-    "rwm_thumbnail_dir": "approved_thumbnails_from_unapproved_images/"
+    "csv_file": "data/samples_images.csv",
+    "data_dir": "/mnt/rwmdata/michael-data/sample_full_images",
+    "full_images_dir": "/mnt/rwmdata/michael-data/sample_full_images/",
+    "thumbnails_folder": "approved_thumbnails_from_unapproved_images/",
+    "thumbnails_dir": "/mnt/rwmdata/michael-data/"
 }

@@ -11,11 +11,16 @@ from src.utils.eppo_to_plant_id_translator import EppoToPlantIdTranslator
 
 STORE_THUMBNAILS_LOCALLY = 0
 STORE_FULL_IMAGES_LOCALLY = 0
-FULL_IMAGES_NUMBER = 10
+FULL_IMAGES_NUMBER = 100
+IGIS = 1
 
 def main():
     # Load config and create output directory structure
     config_path = 'config/config.json'
+
+    if IGIS:
+        config_path = 'config/igis_config.json'
+    
     config = ConfigLoader(config_path)
     output_manager = OutputHandler(config)
     output_manager.create_output_directory()
@@ -32,7 +37,7 @@ def main():
     print(f"Amount of loaded full_images: {len(full_images)}")
     
     # Load thumbnails for multiple classes
-    thumbnail_classes = ['1CHEG', 'CIRAR']
+    thumbnail_classes = ['CIRAR', 'PIBSA', 'SPQOL', 'SOLTU', 'VICFX']
     thumbnails_by_class, load_thumbnail = dataLoader.load_thumbnails(thumbnail_classes)
     thumbnail_selector = ThumbnailSelector(config, thumbnails_by_class, load_thumbnail)
     selected_thumbnails = thumbnail_selector.select_thumbnails(thumbnail_classes)
@@ -45,7 +50,7 @@ def main():
     print(f"Total thumbnails loaded: {len(combined_thumbnails)}")
 
     # Initialize the EppoToPlantIdTranslator
-    eppo_to_plant_id_translator = EppoToPlantIdTranslator('preprocessing/csv_data_IGIS/plant_info_IGIS.csv')
+    eppo_to_plant_id_translator = EppoToPlantIdTranslator('preprocessing/plant_info_IGIS.csv')
 
     # Inject selected thumbnails into loaded full images
     output_injected_images_dir = output_manager.get_output_path('output_injected_images_dir')
@@ -54,7 +59,7 @@ def main():
 
     # Store injected images locally
     for (injected_image, image_data) in injected_images:
-        dataLoader.store_image(injected_image, f"{output_injected_images_dir}/{os.path.splitext(image_data.filename)[0]}.png")
+        dataLoader.store_image(injected_image, f"{output_injected_images_dir}/{os.path.splitext(image_data.filename)[0]}.jpg")
 
 if __name__ == '__main__':
     main()

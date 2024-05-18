@@ -78,7 +78,7 @@ class DataLoader:
         return thumbnails_by_class, load_thumbnail
 
     def load_full_images(self):
-        full_images_dir = self.config.get('full_images_test_dir')
+        full_images_dir = self.config.get('full_images_dir')
         full_images = []
 
         for upload_id in tqdm(os.listdir(full_images_dir), desc="Loading full images"):
