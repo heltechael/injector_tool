@@ -8,6 +8,7 @@ preprocessing/
 !preprocessing/extract_parallel_v2.py
 
 output/
+models/train_assessor.py
 *__pycache_*
 *.pth*
 injection_test_script.py

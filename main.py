@@ -7,6 +7,7 @@ from src.data_loader.data_loader import DataLoader
 from src.thumbnail_selection.thumbnail_selector import ThumbnailSelector
 from src.injection.injector import Injector
 from src.utils.output_handler import OutputHandler
+from src.utils.eppo_to_plant_id_translator import EppoToPlantIdTranslator
 
 STORE_THUMBNAILS_LOCALLY = 0
 STORE_FULL_IMAGES_LOCALLY = 0
@@ -30,18 +31,25 @@ def main():
     full_images = dataLoader.load_full_images()
     print(f"Amount of loaded full_images: {len(full_images)}")
     
-    # Load thumbnails
-    thumbnails_by_class, load_thumbnail = dataLoader.load_thumbnails()
+    # Load thumbnails for multiple classes
+    thumbnail_classes = ['1CHEG', 'CIRAR']
+    thumbnails_by_class, load_thumbnail = dataLoader.load_thumbnails(thumbnail_classes)
     thumbnail_selector = ThumbnailSelector(config, thumbnails_by_class, load_thumbnail)
-    selected_thumbnails = thumbnail_selector.select_thumbnails(['1CHEG'])
-    print(f"Amount of loaded thumbnails: {len(selected_thumbnails['1CHEG'])}")
+    selected_thumbnails = thumbnail_selector.select_thumbnails(thumbnail_classes)
+    
+    # Combine all selected thumbnails into one list
+    combined_thumbnails = []
+    for key in selected_thumbnails:
+        combined_thumbnails.extend(selected_thumbnails[key])
+    
+    print(f"Total thumbnails loaded: {len(combined_thumbnails)}")
 
-    # Select thumbnails to inject
-    thumbdata = selected_thumbnails["1CHEG"]
+    # Initialize the EppoToPlantIdTranslator
+    eppo_to_plant_id_translator = EppoToPlantIdTranslator('preprocessing/csv_data_IGIS/plant_info_IGIS.csv')
 
     # Inject selected thumbnails into loaded full images
     output_injected_images_dir = output_manager.get_output_path('output_injected_images_dir')
-    injector = Injector(config, full_images, thumbdata, csv_path)
+    injector = Injector(config, full_images, combined_thumbnails, csv_path, eppo_to_plant_id_translator)
     injected_images = injector.inject_thumbnails_into_n_full_images(FULL_IMAGES_NUMBER, MAX_INJECTIONS_PER_IMAGE, output_injected_images_dir)
 
     # Store injected images locally

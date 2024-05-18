@@ -9,7 +9,7 @@ from src.utils.csv_utils import CSVUtils
 from src.data_loader.data_loader import DataLoader
 
 class Injector:
-    def __init__(self, config, full_images, thumbdata, csv_path) -> None:
+    def __init__(self, config, full_images, thumbdata, csv_path, eppo_to_plant_id_translator) -> None:
         self.config = config
         self.full_images = full_images
         self.thumbdata = thumbdata
@@ -17,7 +17,7 @@ class Injector:
         self.thumbnailUtils = ThumbnailUtils(config)
         self.gridUtils = GridUtils(config)
         self.dataLoader = DataLoader(config)
-        self.csvUtils = CSVUtils(csv_path)
+        self.csvUtils = CSVUtils(csv_path, eppo_to_plant_id_translator)
 
     def select_random_thumbnails(self, number_of_thumbnails_to_return=1):
         selected_thumbnails = []
@@ -31,7 +31,7 @@ class Injector:
             self.thumbdata.remove(selected_thumbnail)
         
         return selected_thumbnails
-    
+
     def inject_bbox(self, full_image, bbox_image, position):
         x, y = position
         bbox_height, bbox_width, _ = bbox_image.shape
@@ -68,14 +68,15 @@ class Injector:
 
         # Compute unoccupied locations in full image
         output_images_dir = self.config.get('output_dir')
-        upload_id, image_id, filename = image_data.filename.split('_', 2)
-        bounding_boxes = self.csvUtils.get_bounding_boxes(upload_id, image_id, filename)
+        upload_id = image_data.uploadid
+        filename = image_data.filename
+        bounding_boxes = self.csvUtils.get_bounding_boxes(upload_id, filename)
         unoccupied_cells_matrix = self.gridUtils.find_unoccupied_cells_matrix(bounding_boxes, full_image_width, full_image_height, CELL_SIZE)
 
-        # Inject 
+        # Inject thumbnails into the full image
         for i in range(num_injections):
 
-            # Choose thumbnail
+            # Choose a thumbnail
             thumbdata = selected_thumbnails[i]
             thumbnail = self.dataLoader.load_image(thumbdata.path)
             thumb_height, thumb_width, _ = thumbnail.shape
@@ -83,7 +84,7 @@ class Injector:
             # Find viable position for inserting thumbnail
             decent_position = self.gridUtils.find_viable_position(thumb_width, thumb_height, unoccupied_cells_matrix, CELL_SIZE)
             
-            # Thumbnail inserted at position (x,y)
+            # Insert thumbnail at position (x,y)
             if decent_position:
                 x, y = decent_position
                 injected_image, bbox = self.inject_bbox(injected_image, thumbnail, (x, y))
@@ -94,7 +95,6 @@ class Injector:
                 new_annotation = {
                     'UploadId': upload_id,
                     'FileName': filename,
-                    'ImageId': image_id,
                     'UseForTraining': 'True',
                     'PlantId': thumbdata.eppo,
                     'MinX': str(x),
@@ -102,6 +102,7 @@ class Injector:
                     'MinY': str(y),
                     'MaxY': str(y + thumb_height),
                     'Approved': 'True',
+                    'Injected': 'True'
                 }
                 self.csvUtils.add_injected_bounding_box(new_annotation)
             
@@ -111,7 +112,8 @@ class Injector:
 
         # Store debug full image with grid and bounding boxes
         output_bounding_boxes_dir = self.config.get('output_bounding_boxes_dir')
-        self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
+        if self.config.get('DEBUG'):
+            self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
         return injected_image, bounding_boxes
     
     def inject_thumbnails_into_n_full_images(self, num_full_images, max_injections, output_images_dir):
@@ -133,7 +135,7 @@ class Injector:
 
         # Save the filtered CSV file
         output_csv_file = self.config.get('output_csv_file')
-        self.dataLoader.save_filtered_csv_file(output_csv_file, filtered_csv_data)
+        self.csvUtils.save_filtered_csv_file(output_csv_file, filtered_csv_data)
 
         return injected_images
 
@@ -149,23 +151,6 @@ class Injector:
         for j in range(num_cells_x + 1):
             cv2.line(image_with_boxes, (j * cell_size, 0), (j * cell_size, image.shape[0]), (128, 128, 128), 1)
 
-        # Iterate over the cells and draw occupied and unoccupied cells
-        
-        """
-        for i in range(num_cells_x):
-            for j in range(num_cells_y):
-                
-                start_point = (i * cell_size, j * cell_size)
-                end_point = ((i + 1) * cell_size, (j + 1) * cell_size)
-                
-                # Unoccupied cell
-                if unoccupied_cells_matrix[i, j] == 0:            
-                    cv2.rectangle(image_with_boxes, start_point, end_point, (255, 255, 255), -1)
-
-                # Occupied cell
-                else:
-                    cv2.rectangle(image_with_boxes, start_point, end_point, (128, 128, 128), -1)
-        """
         # Iterate over the bounding boxes and draw them
         for minX, maxX, minY, maxY in bounding_boxes:
             cv2.rectangle(image_with_boxes, (minX, minY), (maxX, maxY), (0, 255, 0), 2)

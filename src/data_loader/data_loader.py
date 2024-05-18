@@ -49,7 +49,7 @@ class DataLoader:
     def store_image(self, image, image_path):
         cv2.imwrite(image_path, image)
 
-    def load_thumbnails(self):
+    def load_thumbnails(self, thumbnail_classes):
         thumbnails_dir = self.config.get('thumbnails_dir')
         thumbnails_folder = self.config.get('thumbnails_folder')
         thumbnails_dir = os.path.join(thumbnails_dir, thumbnails_folder)
@@ -60,12 +60,12 @@ class DataLoader:
         thumbnails_by_class = defaultdict(list)
         thumbnail_cache = {}
 
-        thumbnail_paths = glob.glob(os.path.join(thumbnails_dir, "*", "*"))
-        for thumbnail_path in tqdm(thumbnail_paths, desc="Loading thumbnails"):
-            class_dir = os.path.basename(os.path.dirname(thumbnail_path))
-            thumbnail_file = os.path.basename(thumbnail_path)
-            thumbnail_data = ThumbnailData(thumbnail_path, thumbnail_file, class_dir)
-            thumbnails_by_class[class_dir].append(thumbnail_data)
+        for class_dir in thumbnail_classes:
+            thumbnail_paths = glob.glob(os.path.join(thumbnails_dir, class_dir, "*"))
+            for thumbnail_path in tqdm(thumbnail_paths, desc=f"Loading thumbnails for class {class_dir}"):
+                thumbnail_file = os.path.basename(thumbnail_path)
+                thumbnail_data = ThumbnailData(thumbnail_path, thumbnail_file, class_dir)
+                thumbnails_by_class[class_dir].append(thumbnail_data)
 
         def load_thumbnail(thumbnail_data):
             if thumbnail_data.path in thumbnail_cache:
@@ -76,7 +76,6 @@ class DataLoader:
                 return thumbnail
 
         return thumbnails_by_class, load_thumbnail
-
 
     def load_full_images(self):
         full_images_dir = self.config.get('full_images_test_dir')
