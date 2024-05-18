@@ -6,6 +6,10 @@ thumbnail_injector_codebase.txt
 preprocessing/
 !preprocessing/copy_IGIS_images.py
 !preprocessing/extract_parallel_v2.py
+!preprocessing/fetch_from_db_v2.py
+!preprocessing/copy_sample_images_for_injection.py
+!preprocessing/rename_data.py
+!preprocessing/remove_csv.py
 
 output/
 models/train_assessor.py
