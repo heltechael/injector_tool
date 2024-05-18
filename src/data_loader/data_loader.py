@@ -2,9 +2,9 @@ import os
 import cv2
 import csv
 import glob
+import random
 from tqdm import tqdm
 from collections import namedtuple, defaultdict
-from tqdm import tqdm
 
 FullImageData = namedtuple('ImageData', ['path', 'filename', 'uploadid'])
 ThumbnailData = namedtuple('ThumbData', ['path', 'filename', 'eppo'])
@@ -13,6 +13,7 @@ class DataLoader:
     def __init__(self, config):
         self.config = config
         self.image_cache = {}
+        self.full_images = self.load_full_images()
 
     def load_csv_file(self, csv_path):
         data = []
@@ -90,3 +91,6 @@ class DataLoader:
                     full_images.append(image_data)
 
         return full_images
+    
+    def get_random_full_image(self):
+        return random.choice(self.full_images)

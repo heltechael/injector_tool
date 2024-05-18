@@ -2,7 +2,7 @@ import csv
 from collections import defaultdict
 
 # Specify the input CSV file path
-input_file = 'output/injection11/filtered_annotations.csv'
+input_file = 'output/injection20/filtered_annotations.csv'
 
 # Initialize a dictionary to store the counts for each PlantId
 counts_by_plantid = defaultdict(int)

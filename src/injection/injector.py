@@ -9,21 +9,20 @@ from src.utils.csv_utils import CSVUtils
 from src.data_loader.data_loader import DataLoader
 
 class Injector:
-    def __init__(self, config, full_images, thumbdata, csv_path, eppo_to_plant_id_translator) -> None:
+    def __init__(self, config, data_loader, thumbdata, csv_path, eppo_to_plant_id_translator) -> None:
         self.config = config
-        self.full_images = full_images
+        self.dataLoader = data_loader
         self.thumbdata = thumbdata
         self.csv_path = csv_path
         self.thumbnailUtils = ThumbnailUtils(config)
         self.gridUtils = GridUtils(config)
-        self.dataLoader = DataLoader(config)
         self.csvUtils = CSVUtils(csv_path, eppo_to_plant_id_translator)
 
     def select_random_thumbnails(self, number_of_thumbnails_to_return=1):
         selected_thumbnails = []
 
         if len(self.thumbdata) < number_of_thumbnails_to_return:
-            number_of_thumbnails_to_return = len(self.thumbdata)
+            number_of_thumbnails_to_return = len(self.thumbdata)p
 
         for i in range(number_of_thumbnails_to_return):
             selected_thumbnail = random.choice(self.thumbdata)
@@ -116,14 +115,16 @@ class Injector:
 
         # Store debug full image with grid and bounding boxes
         output_bounding_boxes_dir = self.config.get('output_bounding_boxes_dir')
-        self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
+        if self.config.get('DEBUG'):
+            self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
         return injected_image, bounding_boxes
     
     def inject_thumbnails_into_n_full_images(self, num_full_images, max_injections, output_images_dir):
         injected_images = []
         used_full_images = []
 
-        for image_data in tqdm(self.full_images[:num_full_images], desc="Injecting thumbnails"):
+        for _ in tqdm(range(num_full_images), desc="Injecting thumbnails"):
+            image_data = self.dataLoader.get_random_full_image()
             full_image = self.dataLoader.load_image(image_data.path)
             injected_image, _ = self.inject_thumbnails_into_single_full_image(full_image, image_data, max_injections)
             

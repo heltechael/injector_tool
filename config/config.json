@@ -5,7 +5,7 @@
     "FULL_IMAGE_SELECTION_THRESHOLD": 0.5,
     "MAX_INJECTIONS_PER_IMAGE": 50,
     "CELL_SIZE": 10,
-    "DEBUG": 1,
+    "DEBUG": 0,
     "data_dir": "data/",
     "csv_file": "data/cropdiva/FILTERED_all_cropdiva_both_unapproved_and_approved.csv",
     "full_images_dir": "data/full_images/",
