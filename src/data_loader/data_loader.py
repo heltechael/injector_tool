@@ -82,7 +82,7 @@ class DataLoader:
         full_images_dir = self.config.get('full_images_dir')
         full_images = []
 
-        for upload_id in tqdm(os.listdir(full_images_dir), desc="Loading full images"):
+        for upload_id in tqdm(os.listdir(full_images_dir), desc="Loading full images UploadId's"):
             upload_dir = os.path.join(full_images_dir, upload_id)
             if os.path.isdir(upload_dir):
                 for image_file in os.listdir(upload_dir):

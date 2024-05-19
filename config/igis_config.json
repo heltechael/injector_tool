@@ -5,7 +5,7 @@
     "FULL_IMAGE_SELECTION_THRESHOLD": 0.5,
     "MAX_INJECTIONS_PER_IMAGE": 50,
     "CELL_SIZE": 10,
-    "DEBUG": 1,
+    "DEBUG": 0,
     "output_dir": "output",
     "injected_full_images_dir": "output/injected_full_images/",
     "updated_polydata_dir": "output/updated_polydata/",

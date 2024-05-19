@@ -22,7 +22,7 @@ class Injector:
         selected_thumbnails = []
 
         if len(self.thumbdata) < number_of_thumbnails_to_return:
-            number_of_thumbnails_to_return = len(self.thumbdata)p
+            number_of_thumbnails_to_return = len(self.thumbdata)
 
         for i in range(number_of_thumbnails_to_return):
             selected_thumbnail = random.choice(self.thumbdata)
@@ -115,6 +115,7 @@ class Injector:
 
         # Store debug full image with grid and bounding boxes
         output_bounding_boxes_dir = self.config.get('output_bounding_boxes_dir')
+        
         if self.config.get('DEBUG'):
             self.draw_bounding_boxes_on_image_with_grids(injected_image, bounding_boxes, unoccupied_cells_matrix, CELL_SIZE, output_bounding_boxes_dir, filename)
         return injected_image, bounding_boxes
@@ -124,7 +125,17 @@ class Injector:
         used_full_images = []
 
         for _ in tqdm(range(num_full_images), desc="Injecting thumbnails"):
+
+            # Avoid images in box (due to black space being free, thumbs are placed in black space OUTSIDE the dirt)
+            if not self.thumbdata:
+                print("No more thumbnails available for injection.")
+                break
+
             image_data = self.dataLoader.get_random_full_image()
+            if "Box".lower() in image_data.filename.lower():
+                print(f"Skipping image {image_data.filename} because it contains 'Box' in the filename.")
+                continue
+
             full_image = self.dataLoader.load_image(image_data.path)
             injected_image, _ = self.inject_thumbnails_into_single_full_image(full_image, image_data, max_injections)
             

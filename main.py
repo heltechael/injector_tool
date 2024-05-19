@@ -12,7 +12,7 @@ from src.utils.eppo_to_plant_id_translator import EppoToPlantIdTranslator
 
 STORE_THUMBNAILS_LOCALLY = 0
 STORE_FULL_IMAGES_LOCALLY = 0
-FULL_IMAGES_NUMBER = 100
+FULL_IMAGES_NUMBER = 5000
 IGIS = 1
 
 def main():
@@ -35,6 +35,7 @@ def main():
 
     # Load thumbnails for multiple classes
     thumbnail_classes = ['CIRAR', 'PIBSA', 'SPQOL', 'SOLTU', 'VICFX']
+    #thumbnail_classes = ['PIBSA']
     thumbnails_by_class, load_thumbnail = dataLoader.load_thumbnails(thumbnail_classes)
     thumbnail_selector = ThumbnailSelector(config, thumbnails_by_class, load_thumbnail)
     selected_thumbnails = thumbnail_selector.select_thumbnails(thumbnail_classes)
