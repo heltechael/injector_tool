@@ -35,17 +35,17 @@ class Injector:
         x, y = position
         bbox_height, bbox_width, _ = bbox_image.shape
         
-        # Extract the region of interest (ROI) from the full image
+        # Extract ROI / thumb 
         roi = full_image[y:y+bbox_height, x:x+bbox_width]
 
         if self.config.get("REMOVE_THUMBNAIL_BACKGROUND"):
             bbox_image = self.thumbnailUtils.remove_background(bbox_image)
             bbox_image = self.thumbnailUtils.blend_thumbnail_edges(bbox_image)
 
-        # Overlay the thumbnail on the ROI
+        # Overlay the thumbnail
         blended_roi = self.thumbnailUtils.overlay_thumbnail(roi, bbox_image)
 
-        # Update the full image with the blended ROI
+        # Update the full image with thumb
         full_image[y:y+bbox_height, x:x+bbox_width] = blended_roi
 
         bbox = (x, x+bbox_width, y, y+bbox_height)
@@ -56,11 +56,10 @@ class Injector:
         MAX_INJECTIONS_PER_IMAGE = self.config.get("MAX_INJECTIONS_PER_IMAGE")
         CELL_SIZE = self.config.get("CELL_SIZE")
         
-        # Copy full image to create image viable for modification
         injected_image = full_image.copy()
         full_image_height, full_image_width, _ = full_image.shape
 
-        # Select random thumbnails from selected thumbnails to ensure no order bias
+        # Select random thumbnails
         thumbnails_to_inject = min(num_injections, MAX_INJECTIONS_PER_IMAGE)
         selected_thumbnails = self.select_random_thumbnails(thumbnails_to_inject)
         num_injections = len(selected_thumbnails)
@@ -74,13 +73,9 @@ class Injector:
 
         # Inject thumbnails into the full image
         for i in range(num_injections):
-
-            # Choose a thumbnail
             thumbdata = selected_thumbnails[i]
             thumbnail = self.dataLoader.load_image(thumbdata.path)
             thumb_height, thumb_width, _ = thumbnail.shape
-
-            # Find viable position for inserting thumbnail
             decent_position = self.gridUtils.find_viable_position(thumb_width, thumb_height, unoccupied_cells_matrix, CELL_SIZE)
             
             # Insert thumbnail at position (x,y)

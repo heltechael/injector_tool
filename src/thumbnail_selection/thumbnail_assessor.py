@@ -27,16 +27,9 @@ class ThumbnailAssessor:
         return model
 
     def preprocess_thumbnail(self, thumbnail_image):
-        # Convert the NumPy array to a PIL image
         thumbnail_image = Image.fromarray(thumbnail_image)
-
-        # Resize the thumbnail image to 224x224 while maintaining aspect ratio
         resized_image = transforms.functional.resize(thumbnail_image, (224, 224), interpolation=transforms.InterpolationMode.BILINEAR)
-        
-        # Apply padding to fill the remaining space
         padded_image = transforms.functional.pad(resized_image, padding=0, fill=0)
-        
-        # Apply the same preprocessing transformations used during training
         processed_image = self.transform(padded_image)
         return processed_image
 

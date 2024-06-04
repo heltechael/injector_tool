@@ -11,8 +11,6 @@ preprocessing/
 !preprocessing/rename_data.py
 !preprocessing/remove_csv.py
 
-output/
-models/train_assessor.py
 *__pycache_*
 *.pth*
 injection_test_script.py

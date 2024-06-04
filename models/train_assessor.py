@@ -9,12 +9,11 @@ from src.utils.config_loader import ConfigLoader
 config_path = 'config/config.json'
 config = ConfigLoader(config_path)
 
-# Set paths
 good_folder = config.get('good_thumbnails_folder')
 bad_folder = config.get('bad_thumbnails_folder')
 print(good_folder)
 
-# Define the transformations for data preprocessing
+# Aug
 transform = transforms.Compose([
     transforms.RandomResizedCrop(224, scale=(0.8, 1.0)),
     transforms.RandomHorizontalFlip(p=0.5),
@@ -33,20 +32,18 @@ train_dataset, val_dataset = torch.utils.data.random_split(dataset, [train_size,
 train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
 val_loader = DataLoader(val_dataset, batch_size=32)
 
-# Load a pre-trained model (e.g., ResNet-18) and modify the last layer for binary classification
+# Load pre-trained model
 model = models.resnet18(pretrained=True)
 num_ftrs = model.fc.in_features
 model.fc = nn.Linear(num_ftrs, 2)
 
-# Move the model to GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = model.to(device)
 
-# Define the loss function and optimizer
+# loss and optimizer
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop with early stopping
 num_epochs = 500
 patience = 30
 best_accuracy = 0.0
@@ -70,7 +67,6 @@ for epoch in range(num_epochs):
     epoch_loss = running_loss / len(train_loader)
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}")
     
-    # Validation
     model.eval()
     with torch.no_grad():
         correct = 0
@@ -97,5 +93,4 @@ for epoch in range(num_epochs):
                 print("Early stopping triggered.")
                 break
 
-# Save the final model
-#torch.save(model.state_dict(), "models/thumbnail_classifier_final.pth")
+torch.save(model.state_dict(), "models/thumbnail_classifier_final.pth")
