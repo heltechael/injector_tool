@@ -1,0 +1,315 @@
+Id,Name,EPPOCode,cotyledon,Parent,Taxonomy,NameLatin,NameEnglish,NameDanish,NameGerman,ColorHex
+-207,Olieræddike,RAPSO ,-101,-78,Species,Raphanus sativus subsp. oleiferus,Oil radish,Olieræddike,Ölrettich,#b8c5d9
+-206,Lupinus albus,LUPAL ,-101,-204,Species,Lupinus albus,White lupin,Hvid lupin,Weiße Lupine,#f5cbca
+-205,Lupinus angustifolius,LUPAN ,-101,-204,Species,Lupinus angustifolius,Blue lupin,Blå lupin,Blaue Lupine,#4b4add
+-204,Lupinus,1LUPG ,-101,-14,Genus,Lupinus,,,,#8374b9
+-203,Fagopyrum esculentum,FAGES ,-101,-202,Species,Fagopyrum esculentum,Buckwheat,Boghvede,Buchweizen,#6552a8
+-202,Fagopyrum,1FAGG ,-101,-5,Genus,Fagopyrum,,,,#6552a8
+-201,"Spinat, tvetydig",SPQOL4,-101,-137,Species,"Spinacia oleracea, confused","Spinach, confused","Spinat, tvetydig",,#2e6478
+-200,Equisetopsida,1EQUC ,,-13,Equisetopsida,,,,,#ac36d1
+-199,Pinopsida,1PINC ,,-13,Pinopsida,,,,,#d9ce59
+-198,Angiospermae,1ANGC ,,-13,Class,Angiospermae,,,,#5c40d3
+-197,Picea sitchensis,PIESI ,-101,-196,Species,Picea sitchensis,Sitka spruce,Sitka-gran,Sitka-Fichte,#50ffd0
+-196,Picea,1PIEG ,-101,-195,Genus,Picea,Spruce,Gran-slægten,,#6150ff
+-195,Pinaceae,1PINF ,-101,-199,Family,Pinaceae,Pine family,Gran-familien,Kieferngewächse,#50d2ff
+-194,Phacelia tanacetifolia,PHCTA ,-101,-193,Species,Phacelia tanacetifolia,Phacelia,Honningurt,Büschelschön,#c9d15c
+-193,Phacelia,1PHCG ,-101,-21,Genus, Phacelia,,,,#c8d16c
+-192,Plant Stem Emergence Zone,PSEZ  ,,-1,,,Plant Stem Emergence Zone,,,#cf6184
+-191,Hvidkål,BRSOL ,-101,-76,Species,Brassica oleracea var. capitata,White cabbage,Hvidkål,Weißkohl,#618dcf
+-190,Xanthium strumarium,XANST ,-101,-188,Species,Xanthium strumarium,Common cocklebur,,Gewöhnliche Spitzklette,#af0db5
+-189,Xanthium spinosum,XANSP ,-101,-188,Species,Xanthium spinosum,Argentina cocklebur,,Dornige Spitzklette,#9e841b
+-188,Xanthium,1XANG ,-101,-19,Genus,Xanthium,,,,#9e841b
+-187,Sherardia arvensis,SHRAR ,-101,-186,Species,Sherardia arvensis,Field madder,Blåstjerne,Ackerröte,#631b9e
+-186,Sherardia,1SHRG ,-101,-29,Genus,Sherardia,,,,#284f4a
+-185,Setaria verticillata,SETVE ,-100,-129,Species,Setaria verticillata,Bur bristlegrass,,Klebgras,#1f3d39
+-184,Sorghum halepense,SORHA ,-100,-183,Species,Sorghum halepense,Johnson grass,Vild durra,Aleppo-Bartgras,#502c59
+-183,Sorghum,1SORG ,-100,-26,Genus,Sorghum,,,,#4a6a75
+-182,Scandix pecten-veneris,SCAPV ,-101,-181,Species,Scandix pecten-veneris,shepherd's needle,Jomfrukam,Venuskamm,#203840
+-181,Scandix,1SCAG ,-101,-46,Genus,Scandix,,,,#520e61
+-180,Salsola kali,SASKA ,-101,-179,Species,Salsola kali,Prickly saltwort,Sodaurt,Kalisalzkraut,#a8805d
+-179,Salsola,1SASG ,-101,-20,Genus,Salsola,,,,#29183d
+-178,Ridolfia segetum,CRYRI ,-101,-177,Species,Ridolfia segetum,Corn caraway,,Ackerdill,#7aba1b
+-177,Ridolfia,1RDFG ,-101,-46,Genus,Ridolfia,,,,#1b53ba
+-176,Polygonum sp.,POLSS ,-101,-95,Species,Polygonum sp.,,,,#6aba15
+-175,Phalaris minor,PHAMI ,-100,-173,Species,Phalaris minor,Small canary grass,,Kleines Glanzgras,#a3bf2c
+-174,Phalaris brachystachys,PHABR ,-100,-173,Species,Phalaris brachystachys,Confused canarygrass,,kurzähriges Glanzgras,#a4ce3b
+-173,Phalaris,1PHAG ,-100,-26,Genus,Phalaris,,,,#35f4b5
+-172,Buglossoides arvensis,LITAR ,-101,-171,Species,Buglossoides arvensis,Bastard alkanet,Ager-stenfrø,Ackersteinsame,#a3bf2c
+-171,Buglossoides,1BUOG ,-101,-21,Genus,Buglossoides,,,,#3e54f5
+-170,Lactuca serriola,LACSE ,-101,-169,Species,Lactuca serriola,Prickly lettuce,Tornet salat,Stachellattich,#a3bf2c
+-169,Lactuca,1LACG ,-101,-19,Genus,Lactuca,,,,#3e54f5
+-168,Bassia scoparia,KCHSC ,-101,-167,Species,Bassia scoparia,Summer cypress,Sommercypres,Besenradmelde,#33eb32
+-167,Bassia,1BAFG ,-101,-20,Genus,Bassia,,,,#239aef
+-166,Geranium sp.,GERSS ,-101,-84,Species,Geranium sp.,,,,#639a14
+-165,Diplotaxis erucoides,DIPER ,-101,-164,Species,Diplotaxis erucoides,White Wall Rocket,,Raukenähnlicher Doppelsame,#a2cfc3
+-164,Diplotaxis,1DIPG ,-101,-8,Genus,Diplotaxis,,,,#3c53ee
+-163,Digitaria sanguinalis,DIGSA ,-100,-162,Species,Digitaria sanguinalis,Crabgrass,Blodhirse,Blutrote Fingerhirse,#bebec1
+-162,Digitaria,1DIGG ,-100,-26,Genus,Digitaria,,,,#33e4e5
+-161,Datura stramonium,DATST ,-101,-160,Species,Datura stramonium,Common thornapple ,Almindelig pigæble,Gemeiner Stechapfel,#bfae2b
+-160,Datura,1DATG ,-101,-30,Genus,Datura,,,,#3563f4
+-159,Cyperus rotundus,CYPRO ,-100,-158,Species,Cyperus rotundus,Coco Grass,,Knolliges Zypergras,#baaf6e
+-158,Cyperus,1CYPG ,-100,-157,Genus,Chrysanthemum,,,,#396344
+-157,Cyperaceae,1CYPF ,-100,-100,Family,Cyperaceae,,,,#60d2fe
+-156,Chrysanthemum sp.,CHYSS ,-101,-155,Species,Chrysanthemum sp.,,,,#baff67
+-155,Chrysanthemum,1CHYG ,-101,-19,Genus,Chrysanthemum,,,,#396347
+-154,Centaurea diffusa,CENDI ,-101,-138,Species,Centaurea diffusa,Diffuse Knapweed,,Sparrige Flockenblume,#26244d
+-153,Bromus diandrus,BRODI ,-100,-117,Species,Bromus diandrus,Great Brome,,Großährige Trespe,#174521
+-152,Avena sterilis,AVEST ,-100,-116,Species,Avena sterilis,Wild Red Oat,,Wildhafer,#9a679e
+-151,Amaranthus spinosus,AMASS ,-101,-47,Species,Amaranthus spinosus,,,,#9a679e
+-150,Amaranthus blitoides,AMABL ,-101,-47,Species,Amaranthus blitoides,Mat Amaranth,Skebladet Amarant,Westamerikanischer Amarant,#300c33
+-149,Malvaceae,1MAVF ,-101,-101,Family,Malvaceae,,,,#60d2ff
+-148,Abutilon theophrasti,ABUTH ,-101,-147,Species,Abutilon theophrasti,Velvet Leaf,,Samtpappel,#baff60
+-147,Abutilon,1ABUG ,-101,-149,Genus,Malvaceae,,,,#60ffb0
+-146,"Spinat, mix - stresset og med svamp",SPQOL3,-101,-137,Species,"Spinacia oleracea, mix - stressed and with mold","Spinach, mix - stressed and with mold","Spinat, mix - stresset og med svamp","Gemüsespinat, gestresste und mit Schimmel",#e06666
+-145,"Spinat, stresset af svamp",SPQOL2,-101,-137,Species,"Spinacia oleracea, stressed by mold","Spinach, stressed by mold","Spinat, stresset af svamp","Gemüsespinat, mit Schimmel gestresst",#ffd960
+-144,Havejordbær,FRAAN ,-101,-143,Species,Fragaria x Ananassa,Garden Strawberry,Havejordbær,Gartenerdbeere,#a81d34
+-143,Fragaria,1FRAG ,-101,-37,Genus,Rosaceae,,,,#5f1aa3
+-142,"Spinat, stresset men ingen svamp",SPQOL1,-101,-137,Species,"Spinacia oleracea, stressed but no mold","Spinach, stressed but no mold","Spinat, stresset men ingen svamp","Gemüsespinat, gestresst, aber kein Schimmel",#db70d1
+-141,"Spinat, rask",SPQOL0,-101,-137,Species,"Spinacia oleracea, healthy","Spinach, healthy","Spinat, rask","Gemüsespinat, gesunde",#387a61
+-140,"Kartoffel, stresset",SOLTU1,-101,74,Species,"Solanum tuberosum, stressed","Potato, stressed","Kartoffel, stresset","Kartoffel, gestresste",#96268b
+-139,"Kartoffel, rask",SOLTU0,-101,74,Species,"Solanum tuberosum, healthy","Potato, healthy","Kartoffel, rask","Kartoffel, gesunde",#269631
+-138,Centaurea,1CENG ,-101,-19,Genus,Centaurea,,,,#42f5e9
+-137,Spinacia oleracea,SPQOL ,-101,-136,Species,Spinacia oleracea,Spinach,Spinat,Gemüsespinat,#275443
+-136,Spinacia,1SPQG ,-101,-20,Genus,Spinacia,,,,#10412f
+-135,Acer,1ACRG ,-101,-134,Genus,Acer,,,,#df1756
+-134,Sapindaceae,1SAPF ,-101,-101,Family,Sapindaceae,,,,#17cedf
+-133,Schedonorus,1ZHDG ,-100,-26,Genus,Schedonorus,,,,#de38c7
+-132,Zea,1ZEAG ,-100,-26,Genus,Zea,,,,#335c24
+-131,Vulpia,1VLPG ,-100,-26,Genus,Vulpia,,,,#461fe6
+-130,Triticum,1TRZG ,-100,-26,Genus,Triticum,,,,#8b0856
+-129,Setaria,1SETG ,-100,-26,Genus,Setaria,,,,#17df40
+-128,Secale,1SECG ,-100,-26,Genus,Secale,,,,#b32a9d
+-127,Poa,1POAG ,-100,-26,Genus,Poa,,,,#4472d7
+-126,Phragmites,1PHRG ,-100,-26,Genus,Phragmites,,,,#47016c
+-125,Phleum,1PHLG ,-100,-26,Genus,Phleum,,,,#f32231
+-124,Lolium,1LOLG ,-100,-26,Genus,Lolium,,,,#6604a8
+-123,Hordeum,1HORG ,-100,-26,Genus,Hordeum,,,,#2716f5
+-122,Holcus,1HOLG ,-100,-26,Genus,Holcus,,,,#edad3d
+-121,Festuca,1FESG ,-100,-26,Genus,Festuca,,,,#f0cdf2
+-120,Elymus,1ELYG ,-100,-26,Genus,Elymus,,,,#fc370e
+-119,Echinochloa,1ECHG ,-100,-26,Genus,Echinochloa,,,,#b28121
+-118,Dactylis,1DACG ,-100,-26,Genus,Dactylis,,,,#2082f3
+-117,Bromus,1BROG ,-100,-26,Genus,Bromus,,,,#4ece24
+-116,Avena,1AVEG ,-100,-26,Genus,Avena,,,,#7d08a4
+-115,Apera,1APEG ,-100,-26,Genus,Apera,,,,#afa501
+-114,Alopecurus,1ALOG ,-100,-26,Genus,Alopecurus,,,,#aa556e
+-113,Agrostis,1AGSG ,-100,-26,Genus,Agrostis,,,,#9f059a
+-112,Viola,1VIOG ,-101,-32,Genus,Viola,,,,#9403a4
+-111,Urtica,1URTG ,-101,-31,Genus,Urtica,,,,#421a20
+-110,Heracleum,1HERG ,-101,-46,Genus,Heracleum,,,,#3eb830
+-109,Aethusa,1AETG ,-101,-46,Genus,Aethusa,,,,#7a5759
+-108,Solanum,1SOLG ,-101,-30,Genus,Solanum,,,,#5ae921
+-107,Galium,1GALG ,-101,-29,Genus,Galium,,,,#7fdf1d
+-106,Potentilla,1PTLG ,-101,-37,Genus,Potentilla,,,,#ed62dd
+-105,Aphanes,1APHG ,-101,-37,Genus,Aphanes,,,,#1e851b
+-104,Ranunculus,1RANG ,-101,-45,Genus,Ranunculus,,,,#e75c50
+-103,Anagallis,1ANGG ,-101,-44,Genus,Anagallis,,,,#ce8aff
+-102,Papaver,1PAPG ,-101,-28,Genus,Papaver,,,,#b1a74 
+-101,2-Kimbladet,PPPDD ,-101,-198,,dicotyledonous plants,Dicot,2-Kimbladet,Dikotyledonen,#2C00F4
+-100,1-Kimbladet,PPPMM ,-100,-198,,monocotyledonous plants,Monocot,1-Kimbladet,Monocotyledon,#760093
+-99,Fumaria,1FUMG ,-101,-28,Genus,Fumaria,,,,#e5482 
+-98,Portulaca,1PORG ,-101,-43,Genus,Portulaca,,,,#c9a325
+-97,Rumex,1RUMG ,-101,-5,Genus,Rumex,,,,#3f8384
+-96,Persicaria,1PRAG ,-101,-5,Genus,Persicaria,,,,#bfcc36
+-95,Polygonum,1POLG ,-101,-5,Genus,Polygonum,,,,#6084b4
+-94,Fallopia,1FOPG ,-101,-5,Genus,Fallopia,,,,#d80425
+-93,Veronica,1VERG ,-101,-4,Genus,Veronica,,,,#5d8a37
+-92,Plantago,1PLAG ,-101,-4,Genus,Plantago,,,,#a16cb7
+-91,Epilobium,1EPIG ,-101,-42,Genus,Epilobium,,,,#9e4234
+-90,Pisum,1PIBG ,-101,-14,Genus,Pisum,,,,#4efbfc
+-89,Stachys,1STAG ,-101,-27,Genus,Stachys,,,,#cc30cc
+-88,Mentha,1MENG ,-101,-27,Genus,Mentha,,,,#a80a5 
+-87,Lamium,1LAMG ,-101,-27,Genus,Lamium,,,,#d79fbd
+-86,Galeopsis,1GAEG ,-101,-27,Genus,Galeopsis,,,,#f8a60e
+-85,Juncus,1IUNG ,-101,-41,Genus,Juncus,,,,#cf8aba
+-84,Geranium,1GERG ,-101,-25,Genus,Geranium,,,,#639145
+-83,Erodium,1EROG ,-101,-25,Genus,Erodium,,,,#399f2 
+-82,Euphorbia,1EPHG ,-101,-3,Genus,Euphorbia,,,,#d1c842
+-81,Thlaspi,1THLG ,-101,-8,Genus,Thlaspi,,,,#a5f32 
+-80,Sinapis,1SING ,-101,-8,Genus,Sinapis,,,,#67e674
+-79,Rorippa,1RORG ,-101,-8,Genus,Rorippa,,,,#c59e67
+-78,Raphanus,1RAPG ,-101,-8,Genus,Raphanus,,,,#c04a46
+-77,Capsella,1CAPG ,-101,-8,Genus,Capsella,,,,#cf69db
+-76,Brassica,1BRSG ,-101,-8,Genus,Brassica,,,,#9d71c5
+-75,Arabidopsis,1ARBG ,-101,-8,Genus,Arabidopsis,,,,#73068e
+-74,Convolvulus,1CONG ,-101,-23,Genus,Convolvulus,,,,#b4ca0c
+-73,Tussilago,1TUSG ,-101,-19,Genus,Tussilago,,,,#619950
+-72,Tripleurospermum,1TPMG ,-101,-19,Genus,Tripleurospermum,,,,#5a8bd8
+-71,Taraxacum,1TARG ,-101,-19,Genus,Taraxacum,,,,#a42f74
+-70,Sonchus,1SONG ,-101,-19,Genus,Sonchus,,,,#6bf2b8
+-69,Senecio,1SENG ,-101,-19,Genus,Senecio,,,,#4f226a
+-68,Lapsana,1LAPG ,-101,-19,Genus,Lapsana,,,,#5f0bf7
+-67,Cyanus,1KYUG ,-101,-19,Genus,Cyanus,,,,#772d20
+-66,Jacobaea,1JACG ,-101,-19,Genus,Jacobaea,,,,#8a5960
+-65,Gnaphalium,1GNAG ,-101,-19,Genus,Gnaphalium,,,,#45245 
+-64,Glebionis,1GBNG ,-101,-19,Genus,Glebionis,,,,#4ef433
+-63,Galinsoga,1GASG ,-101,-19,Genus,Galinsoga,,,,#918f4c
+-62,Cirsium,1CIRG ,-101,-19,Genus,Cirsium,,,,#fe6d90
+-61,Bidens,1BIDG ,-101,-19,Genus,Bidens,,,,#18adb1
+-60,Artemisia,1ARTG ,-101,-19,Genus,Artemisia,,,,#7b9e10
+-59,Anthemis,1ANTG ,-101,-19,Genus,Anthemis,,,,#35ba8e
+-58,Achillea,1ACHG ,-101,-19,Genus,Achillea,,,,#1a4e97
+-57,Stellaria,1STEG ,-101,-22,Genus,Stellaria,,,,#2ca5b5
+-56,Spergula,1SPRG ,-101,-22,Genus,Spergula,,,,#784a13
+-55,Silene,1SILG ,-101,-22,Genus,Silene,,,,#66e912
+-54,Cerastium,1CERG ,-101,-22,Genus,Cerastium,,,,#66222e
+-53,Myosotis,1MYOG ,-101,-21,Genus,Myosotis,,,,#7392  
+-52,Anchusa,1ANCG ,-101,-21,Genus,Anchusa,,,,#db5336
+-51,Amsinckia,1AMSG ,-101,-21,Genus,Amsinckia,,,,#fec41c
+-50,Chenopodium,1CHEG ,-101,-20,Genus,Chenopodium,,,,#385673
+-49,Beta,1BEAG ,-101,-20,Genus,Beta,,,,#2973c9
+-48,Atriplex,1ATXG ,-101,-20,Genus,Atriplex,,,,#7d63c0
+-47,Amaranthus,1AMAG ,-101,-20,Genus,Amaranthus,,,,#e3145d
+-46,Apiaceae,1UMBF ,-101,-101,Family,Apiaceae,,,,#89c1c0
+-45,Ranunculaceae,1RANF ,-101,-101,Family,Ranunculaceae,,,,#cd8fa1
+-44,Primulaceae,1PRIF ,-101,-101,Family,Primulaceae,,,,#8ab0d1
+-43,Portulacaceae,1PORF ,-101,-101,Family,Portulacaceae,,,,#610d12
+-42,Onagraceae,1ONAF ,-101,-101,Family,Onagraceae,,,,#8d882b
+-41,Juncaceae,1JUNF ,-101,-101,Family,Juncaceae,,,,#5d4a32
+-40,Equisetaceae,1EQUF ,-101,-200,Family,Equisetaceae,,,,#5952ae
+-39,Dyr,1ANIMK,,-1,Kingdom,Animalia,Animals,Dyr,Tiere,#f5a049
+-38,Krybende potentil,PTLRE ,-101,-106,Species,Potentilla reptans,creeping cinquefoil,Krybende potentil,Kriechendes Fingerkraut,#f6fe3b
+-37,Rosaceae,1ROSF ,-101,-101,Family,Rosaceae,,,,#e092e6
+-36,Carduus,1CRUG ,-101,-19,Genus,Carduus,,,,#16007D
+-35,Kløver,1TRFG ,-101,-14,Genus,Trifolium,Clover,Kløver,Klee,#96cba7
+-34,Mark-ært,PIBSA ,-101,-90,Species,Pisum sativum subsp. arvense,Field Pea,Mark-ært,Ackererbse,#b22557
+-33,Vikke,1VICG ,-101,-14,Genus,Vicia,Vetch,Vikke,Wicken,#be5d18
+-32,Violaceae,1VIOF ,-101,-101,Family,Violaceae,,,,#437bdd
+-31,Urticaceae,1URTF ,-101,-101,Family,Urticaceae,,,,#0b9a78
+-30,Solanaceae,1SOLF ,-101,-101,Family,Solanaceae,,,,#d658e3
+-29,Rubiaceae,1RUBF ,-101,-101,Family,Rubiaceae,,,,#c51206
+-28,Papaveraceae,1PPAF ,-101,-101,Family,Papaveraceae,,,,#761d7d
+-27,Lamiaceae,1LAMF ,-101,-101,Family,Lamiaceae,,,,#2ae9d6
+-26,Græsser,1GRAF ,-100,-100,Family,Poaceae,Grasses,Græsser,Gräser,#2fe40e
+-25,Geraniaceae,1GERF ,-101,-101,Family,Geraniaceae,,,,#eb0b3f
+-24,Equisetum,1EQUG ,-101,-40,Genus,Equisetum,,,,#74521c
+-23,Convolvulaceae,1COVF ,-101,-101,Family,Convolvulaceae,,,,#2b1291
+-22,Caryophyllaceae,1CAFF ,-101,-101,Family,Caryophyllaceae,,,,#8e9d0a
+-21,Boraginaceae,1BORF ,-101,-101,Family,Boraginaceae,,,,#e7b3e9
+-20,Amaranthaceae,1AMAF ,-101,-101,Family,Amaranthaceae,,,,#25ec70
+-19,Kurvblomst,1COMF ,-101,-101,Family,Asteraceae,Asteraceae,Kurvblomst,Korbblütler,#D66922
+-18,Ru svinemælk,SONAS ,-101,-70,Species,Sonchus asper,Prickly sow-thistle,Ru svinemælk,Raue Gänsedistel,#D00B6F
+-17,Almindelig svinemælk,SONOL ,-101,-70,Species,Sonchus oleraceus,Common milkthistle,Almindelig svinemælk,Gewöhnliche Gänsedistel,#21ECF7
+-16,Tofrøet vikke ,VICHI ,-101,-33,Species,Vicia hirsuta,Hairy tare,Tofrøet vikke ,Rauhhaarige Wicke,#54C6B1
+-15,Hestebønne,VICFX ,-101,-33,Species,Vicia faba,Faba bean,Hestebønne,Ackerbohne,#48C790
+-14,Fabaceae,1LEGF ,-101,-101,Family,Fabaceae,,,,#657AA6
+-13,Plante,1PLAK ,,-1,Kingdom,Plantae,Plant,Plante,Pflanze,#0fa21a
+-8,Korsblomstrede,1CRUF ,-101,-101,Family,Brassicaceae,Brassicas,Korsblomstrede,Kreuzblütler,#497854
+-7,"Korn, dyrket",NNNGG ,-100,-26,non-taxonomic,,cereal plants,kornplanter,Getreidepflanzen,#722E98
+-6,Matricaria,1MATG ,-101,-19,Genus,Matricaria,,,,#704A8A
+-5,Pileurt,1POLF ,-101,-101,Family,Polygonaceae,Knotweed,Pileurt,,#B43325
+-4,Ærenpris,1PLAF ,-101,-101,Family,Plantaginaceae,Speedwell,Ærenpris,Ehrenpreis,#7A819C
+-3,Vortemælk,1EUPF ,-101,-101,Family,Euphorbiaceae,Spurge,Vortemælk,Wolfsmilch,#885135
+-1,Ikke Grupperet,3UNCLK,,,,Unclassified,Unclassified,Ikke Grupperet,Unsortiert,#FF0000
+0,Ikke kategoriserbart,,,-1,,,Junk,Ikke kategoriserbart,Nicht Kategorisierbar,#E9E934
+1,"Arve, rød",ANGAR ,-101,-103,Species,Anagallis arvensis,Scarlet Pimpernel,"Arve, rød",Roter Gauchheil,#9A17F9
+5,"Snerle, ager",CONAR ,-101,-74,Species,Convolvulus arvensis,Field Bindweed,"Snerle, ager",Ackerwinde,#ECE741
+8,"Bakkestjerne, canadisk",CONCA ,-101,-74,Species,Convolvulus canariensis,Canadian Fleabane,"Bakkestjerne, canadisk",Kanadisches Berufkraut,#8A3864
+9,"Bjørneklo, kæmpe",HERMZ ,-101,-110,Species,Heracleum mantegazzianum,Giant Hogweed,"Bjørneklo, kæmpe",Riesenbärenklau,#29C18C
+11,"Brandbæger, alm.",SENVU ,-101,-69,Species,Senecio vulgaris,Groundsel,"Brandbæger, alm.",Gemeines Greiskraut,#703FE5
+12,"Brandbæger, vår",SENVE ,-101,-69,Species,Senecio leucanthemifolius subsp. vernalis,Spring Groundsel,"Brandbæger, vår",Frühlingsreiskraut,#3040E4
+13,"Brandbæger, eng",SENJA ,-101,-66,Species,Jacobaea vulgaris,Common Ragwort,"Brandbæger, eng",Jakobsgreiskraut,#E41DEB
+16,"Brøndsel, fliget",BIDTR ,-101,-61,Species,Bidens tripartita,Trifid Bur-Marigold,"Brøndsel, fliget",Dreiteiliger Zweizahn,#8AFADA
+20,"Bynke, grå",ARTVU ,-101,-60,Species,Artemisia vulgaris,Mugwort,"Bynke, grå",Gemeiner Beifuss,#84E929
+22,"Dueurt, glat",EPIMO ,-101,-91,Species,Epilobium montanum,Broad-leaved Willowherb,"Dueurt, glat",Bergweidenröschen,#87A7A0
+23,"Dværgløvefod, alm.",APHAR ,-101,-105,Species,Aphanes arvensis,Parsley-piert,"Dværgløvefod, alm.",Gewöhnlicher Acker-Frauenmantel,#2BB42E
+24,Fløjlsgræs,HOLLA ,-100,-122,Species,Holcus lanatus,Yorkshire Fog,Fløjlsgræs,Wolliges Honiggras,#085029
+26,"Forglemmigej, mark",MYOAR ,-101,-53,Species,Myosotis arvensis,Field-Forget-Me-Not,"Forglemmigej, mark",Ackervergissmeinnicht,#78E9B8
+27,Fuglegræs,STEME ,-101,-57,Species,Stellaria media,Common Chickweed,Fuglegræs,Vogelmiere,#CB77B2
+28,Følfod,TUSFA ,-101,-73,Species,Tussilago farfara,Coltsfoot,Følfod,Huflattich,#ACF0C3
+30,"Skærmaks, grøn",SETVI ,-100,-129,Species,Setaria viridis,Green Bristle-grass,"Skærmaks, grøn",Grüne Borstenhirse,#D13B54
+31,"Gåsefod, hvidmelet",CHEAL ,-101,-50,Species,Chenopodium album,Fat-Hen,"Gåsefod, hvidmelet",Weisser Gänsefuss,#F304A2
+32,Gåsemad,ARBTH ,-101,-75,Species,Arabidopsis thaliana,Thale Cress,Gåsemad,Ackerschmalwand,#1229B4
+33,"Gåseurt, ager",ANTAR ,-101,-59,Species,Anthemis arvensis,Corn Chamomile,"Gåseurt, ager",Ackerhundskamille,#4DDED8
+39,Almindelig Hanekro,GAETE ,-101,-86,Species,Galeopsis tetrahit,Common Hemp-Nettle,Almindelig Hanekro,Hohlzahn,#3C161E
+40,"Hanespore, alm.",ECHCG ,-100,-119,Species,Echinochloa crus-galli,Cockspur,"Hanespore, alm.",Hühnerhirse,#71BD2D
+42,Haremad,LAPCO ,-101,-68,Species,Lapsana communis,Nipplewort,Haremad,Mauerlattich,#ED38BC
+45,"Hejre, blød",BROMO ,-100,-117,Species,Bromus hordeaceus,Soft Brome,"Hejre, blød",Weiche Trespe,#470E17
+46,"Hejre, gold",BROST ,-100,-117,Species,Bromus sterilis,Barren Brome,"Hejre, gold",Taube Trespe,#7A8E78
+50,Hejrenæb,EROCI ,-101,-83,Species,Erodium cicutarium,Common Stork's-bill,Hejrenæb,Gemeineer Reiherschnabel,#0299C3
+54,Hundepersille,AETCY ,-101,-109,Species,Aethusa cynapium,Fool´s Parsley,Hundepersille,Hundspetersilie,#E6002E
+57,"Hvene, kryb",AGSST ,-100,-113,Species,Agrostis stolonifera,Creeping Bent,"Hvene, kryb",Weisses Straussgrass,#864D9F
+66,"Hønsetarm, alm.",CERFO ,-101,-54,Species,Cerastium fontanum,Common Mouse-ear,"Hønsetarm, alm.",Gemeines Hornkraut,#6B2833
+67,"Jordrøg, læge",FUMOF ,-101,-99,Species,Fumaria officinalis,Common Fumitory,"Jordrøg, læge",Gemeiner Erdrauch,#CC4888
+68,"Kål, ager",BRSRA ,-101,-76,Species,Brassica rapa subsp. sylvestris,Wild Turnip,"Kål, ager",Rübenkohl,#3615AF
+71,"Kamille, lugtløs",MATIN ,-101,-72,Species,Tripleurospermum inodorum,Scentless Mayweed,"Kamille, lugtløs",Duftlose Kamille,#A154CD
+72,"Kamille, skive",MATMT ,-101,-6,Species,Matricaria discoidea,Pineapple-weed,"Kamille, skive",Strahlenlose Kamille,#B5B24C
+73,"Kamille, vellugtende",MATCH ,-101,-6,Species,Matricaria chamomilla,Scented Mayweed,"Kamille, vellugtende",Echte Kamille,#092F7C
+74,Kartoffel,SOLTU ,-101,-108,Species,Solanum tuberosum,Potato,Kartoffel,Kartoffel,#1466C1
+75,Kiddike,RAPRA ,-101,-78,Species,Raphanus raphanistrum,Wild Radish,Kiddike,Hederich,#41F442
+81,Kornblomst,CENCY ,-101,-138,Species,Cyanus segetum,Cornflower,Kornblomst,Kornblume,#138471
+82,Kortstråle,GASSS ,-101,-63,Species,Galinsoga sp.,Soldier,Kortstråle,Franzosenkraut,#D62857
+83,Krumhals,LYCAR ,-101,-52,Species,Anchusa arvensis,Bugloss,Krumhals,Ackerkrummhals,#16277A
+84,Kærgaltetand,STAPA ,-101,-89,Species,Stachys palustris,Marsh Woundwort,Kærgaltetand,Sumpfziest,#BA650D
+85,"Limurt, nat",MELNO ,-101,-55,Species,Silene noctiflora,Night-flowering Catchfly,"Limurt, nat",Ackerlichtnelke,#086F51
+87,"Mynte, ager",MENAR ,-101,-88,Species,Mentha arvensis,Corn Mint,"Mynte, ager",Ackerminze,#DCFF8F
+89,"Mælde, svine",ATXPA ,-101,-48,Species,Atriplex patula,Common Orache,"Mælde, svine",Gemeine Melde,#4DDC26
+90,Mælkebøtte,TAROF ,-101,-71,Species,Taraxacum officinale,Dandelion,Mælkebøtte,Gemeiner Löwenzahn,#06A513
+91,"Natskygge, sort",SOLNI ,-101,-108,Species,Solanum nigrum,Black Nightshade,"Natskygge, sort",Schwarzer Nachtschatten,#84BA7D
+94,"Nælde, liden",URTUR ,-101,-111,Species,Urtica urens,Annual Nettle,"Nælde, liden",Kleine Brennessel,#2F88C5
+95,"Nælde, stor",URTDI ,-101,-111,Species,Urtica dioica,Common Nettle,"Nælde, stor",Grosse Brennessel,#700A83
+98,"Okseøje, gul",CHYSE ,-101,-64,Species,Glebionis segetum,Corn Marigold,"Okseøje, gul",Saatwucherblume,#851D1B
+100,"Padderokke, ager",EQUAR ,-101,-24,Species,Equisetum arvense,Field Horsetail,"Padderokke, ager",Ackerschachtelhalm,#1EB030
+101,Pengeurt,THLAR ,-101,-81,Species,Thlaspi arvense,Field Penny-cress,Pengeurt,Ackerhellerkraut,#CE36D0
+103,"Pileurt, bleg",POLLA ,-101,-96,Species,Persicaria lapathifolia,Pale Persicaria,"Pileurt, bleg",Ampferknöterich,#E0621B
+104,"Pileurt, fersken",POLPE ,-101,-96,Species,Persicaria maculosa,Redshank,"Pileurt, fersken",Floh-Knöterich,#DFF4E9
+105,"Pileurt, snerle",POLCO ,-101,-94,Species,Fallopia convolvulus,Black-Bindweed,"Pileurt, snerle",Windenknöterich,#E1DA0C
+106,"Pileurt, vand",POLAM ,-101,-96,Species,Persicaria amphibia,Amphibious Bistort,"Pileurt, vand",Wasserknöterich,#5ADC47
+107,"Pileurt, vej",POLAV ,-101,-95,Species,Polygonum aviculare,Knotgrass,"Pileurt, vej",Vogelknöterich,#AA4D17
+109,"Pragtstjerne, aften",MELAL ,-101,-55,Species,Silene latifolia subsp. alba,White Campion,"Pragtstjerne, aften",Weisse Lichtnelke,#78C29D
+110,"Ranunkel, lav",RANRE ,-101,-104,Species,Ranunculus repens,Creeping Buttercup,"Ranunkel, lav",Kriechender Hahnenfuss,#07AF27
+116,"Rapgræs, alm.",POATR ,-100,-127,Species,Poa trivialis,Rough Meadow-grass,"Rapgræs, alm.",Gemeines Rispengras,#D7DEFF
+117,"Rapgræs, enårig",POAAN ,-100,-127,Species,Poa annua,Annual Meadow-grass,"Rapgræs, enårig",Einjähriges Rispengras,#A940BC
+120,"Røllike, alm.",ACHMI ,-101,-58,Species,Achillea millefolium,Yarrow,"Røllike, alm.",Wiesen-Scharfgarbe,#A45933
+131,"Sennep, ager",SINAR ,-101,-80,Species,Sinapis arvensis,Charlock,"Sennep, ager",Ackersenf,#4640A0
+138,"Siv, strand",IUNMT ,-101,-85,Species,Juncus maritimus,Sea Rush,"Siv, strand",Meerstrand-Binse,#257C10
+139,"Skræppe, butbladet",RUMOB ,-101,-97,Species,Rumex obtusifolius,Broad-leaved Dock,"Skræppe, butbladet",Stumpfblätiger Ampfer,#33EC79
+141,"Skræppe, kruset",RUMCR ,-101,-97,Species,Rumex crispus,Curled Dock,"Skræppe, kruset",Krauser Ampfer,#6B679B
+145,Burresnerre,GALAP ,-101,-107,Species,Galium aparine,Cleavers,Burresnerre,Klettenlabkraut,#588F00
+146,"Spergel, alm.",SPRAR ,-101,-56,Species,Spergula arvensis,Corn Spurrey,"Spergel, alm.",Ackerspörgel,#6B4C7A
+148,"Spildkorn, havre",AVESA ,-100,-116,Species,Avena sativa,"Oat, volunteers","Spildkorn, havre","Hafer, Durchwuchs-",#83AEE6
+149,Ager-Stedmoderblomst,VIOAR ,-101,-112,Species,Viola arvensis,Field Pansy,Ager-Stedmoderblomst,Ackerstiefmütterchen,#EC562E
+150,"Spildkorn, hvede",TRZAX ,-100,-130,Species,Triticum aestivum,"Wheat, volunteers","Spildkorn, hvede","Weizen, Durchwuchs",#B3393A
+151,"Spildkorn, rug",SECCE ,-100,-128,Species,Secale cereale,"Rye, volunteer","Spildkorn, rug","Roggen, Durchwuchs-",#6A18C7
+152,Blød storkenæb,GERMO ,-101,-84,Species,Geranium molle,dovesfoot cranesbill,Blød storkenæb,Storchenschnabel,#0CA526
+157,Svinemælk,SONSS ,-101,-70,Species,Sonchus sp.,Sow-thistle,Svinemælk,Gänsedistel,#0B5B4E
+159,Tagrør,PHRCO ,-100,-126,Species,Phragmites australis,Common Reed,Tagrør,Schilf,#34ABE8
+162,Agertidsel,CIRAR ,-101,-62,Species,Cirsium arvense,Creeping Thistle,Agertidsel,Ackerkratzdistel,#55806C
+167,Tvetand,LAMSS ,-101,-87,Species,Lamium sp.,Dead-nettle,Tvetand,Taubnessel,#790516
+173,"Valmue, korn",PAPRH ,-101,-102,Species,Papaver rhoeas,Common Poppy,"Valmue, korn",Klatschmohn,#E3F4F7
+175,"Vejbred, glat",PLAMA ,-101,-92,Species,Plantago major,Greater Plantain,"Vejbred, glat",Breitwegerich,#9F9C05
+176,"Vejbred, lancet",PLALA ,-101,-92,Species,Plantago lanceolata,Ribwort Plantain,"Vejbred, lancet",Spitzwegerich,#7e0774
+178,Vejguldkarse,RORSY ,-101,-79,Species,Rorippa sylvestris,Creeping Yellowcress,Vejguldkarse,Wilde Sumpfkresse,#6D712C
+179,"Vortemælk, skærm",EPHHE ,-101,-82,Species,Euphorbia helioscopia,Sun Spurge,"Vortemælk, skærm",Sonnenwendwolfsmilch,#E0C01F
+181,"Vortemælk, gaffel",EPHPE ,-101,-82,Species,Euphorbia peplus,Petty Spurge,"Vortemælk, gaffel",Gartenwolfsmilch,#A591C6
+182,"Væselhale, stor",VLPMY ,-100,-131,Species,Vulpia myuros,Rat's-tail Fescue,"Væselhale, stor",Mäuseschwanz-Federschwingel,#1E56AA
+183,"Ærenpris, storkronet",VERPE ,-101,-93,Species,Veronica persica,Common Field-speedwell,"Ærenpris, storkronet",Persischer Ehrenpreis,#F4EDB6
+185,"Ærenpris, vedbend",VERHE ,-101,-93,Species,Veronica hederifolia,Ivy-leaved Speedwell,"Ærenpris, vedbend",Efeublättriger Ehrenpreis,#4F0CA1
+187,"Ærenpris, mark",VERAR ,-101,-93,Species,Veronica arvensis,Wall Speedwell,"Ærenpris, mark",Feldehrenpreis,#C17296
+191,Hyrdetaske,CAPBP ,-101,-77,Species,Capsella bursa-pastoris,Sherpherd´s-Purse,Hyrdetaske,Hirtentäschel,#BA7A17
+194,Vindaks,APESV ,-100,-115,Species,Apera spica-venti,Loose Silky-bent,Vindaks,Gemeiner Windhalm,#BC8629
+196,Gulurt,AMSCA ,-101,-51,Species,Amsinckia calycina,Fiddleneck,Gulurt,Amsinckia,#887B88
+955,"Rajgræs, alm.",LOLPE ,-100,-124,Species,Lolium perenne,Perennial Rye-grass,"Rajgræs, alm.",Deutsches Weidelgras,#76F9EB
+956,"Svingel, rød",FESRU ,-100,-121,Species,Festuca rubra,Red Fescue,"Svingel, rød",Roter Schwingel,#AFF030
+987,Raps,BRSNN ,-101,-76,Species,Brassica napus,Oil-seed Rape,Raps,Raps,#281DCB
+988,"Rævehale, ager",ALOMY ,-100,-114,Species,Alopecurus myosuroides,Black-grass,"Rævehale, ager",Ackerfuchsschwanz,#3D41D3
+994,"Spildkorn, byg",HORVX ,-100,-123,Species,Hordeum vulgare,"Barley, volunteers","Spildkorn, byg","Gerste, Durchwuchs",#6861E7
+995,Flyvehavre,AVEFA ,-100,-116,Species,Avena fatua,Spring Wild-oat,Flyvehavre,Flughafer,#8C2130
+996,"Kvik, alm.",AGRRE ,-100,-120,Species,Elymus repens,Couch-grass,"Kvik, alm.",Gemeine Quecke,#50272A
+1117,"Rævehale, knæbøjet",ALOGE ,-100,-114,Species,Alopecurus geniculatus,Marsh Foxtail,"Rævehale, knæbøjet",Knickfuchsschwanzgras,#FF20A4
+1302,"Evighedsblomst, sump",GNAUL ,-101,-65,Species,Gnaphalium uliginosum,Marsh Cudweed,"Evighedsblomst, sump",Sumpfruhrkraut,#0C5195
+2020,"Rajgræs, ital.",LOLMU ,-100,-124,Species,Lolium multiflorum,Italian Rye-grass,"Rajgræs, ital.",Vielblütiges Weidelgras,#871FD5
+2110,engsvingel,FESPR ,-100,-133,Species,Schedonorus pratensis,meadow fescue,engsvingel,Wiesenschwingel,#357753
+2120,"Svingel, stivbladet",FESOV ,-100,-121,Species,Festuca ovina,Sheep's Fescue,"Svingel, stivbladet",Härtlicher Schwingel,#BAEAB9
+2160,"Svingel, strand",FESAR ,-100,-133,Species,Schedonorus arundinaceus,Tall Fescue,"Svingel, strand",Rohrschwingel,#91839D
+2210,Timothé,PHLPR ,-100,-125,Species,Phleum pratense,Timothy,Timothé,Wiesenlieschgras,#244032
+2230,"Rapgræs, eng",POAPR ,-100,-127,Species,Poa pratensis,Smooth Meadow-grass,"Rapgræs, eng",Wiesen-Rispengras,#B608C9
+2290,Hundegræs,DACGL ,-100,-118,Species,Dactylis glomerata,Cocksfoot,Hundegræs,Knäuelgras,#694988
+2410,"Kløver, hvid",TRFRE ,-101,-35,Species,Trifolium repens,White Clover,"Kløver, hvid",Kriechender Klee,#58C3CC
+2420,"Kløver, rød",TRFPR ,-101,-35,Species,Trifolium pratense,Red Clover,"Kløver, rød",Roter Wiesenklee,#9198CD
+2430,Græsk amarant,AMAGR ,-101,-47,Species,Amaranthus graecizans,Mediterranean amaranth,Græsk amarant,Afrikanischer Fuchsschwanz,#EF42F5
+2440,Portulak,POROL ,-101,-98,Species,Portulaca oleracea,Common purslane,Portulak,Portulak,#76D41E
+2450,Majs,ZEAMX ,-100,-132,Species,Zea mays,Maize,Majs,Mais,#E3ED1F
+2460,Sukkerroe,BEAVA ,-101,-49,Species,Beta vulgaris subsp. vulgaris var. altissima,Sugar beet,Sukkerroe,Zuckerrübe,#1B2E96
+2470,Silphium integrifolium,SIPIN ,-101,2480,Species,Silphium integrifolium,Whole-leaf rosinweed,Silphium integrifolium,Silphie,#cb4b8c
+2480,Silphium,1SIPG ,-101,-19,Genus,Silphium,Silphium,Silphium,Silphium,#f18c4c
